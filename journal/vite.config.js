@@ -8,10 +8,13 @@ export default defineConfig({
   federation({
     name: "remote_app",
     filename: "remoteEntry.js",
+    remotes: {
+      remoteStore: "http://localhost:5003/assets/remoteEntry.js",
+    },
     exposes: {
       "./JournalRoutes": "./src/routes/JournalRoutes",
     },
-    shared: ["react", "react-dom", 'react-router-dom'],
+    shared: ["react", "react-dom", 'react-router-dom', 'react-redux'],
   }),],
 
   build: {

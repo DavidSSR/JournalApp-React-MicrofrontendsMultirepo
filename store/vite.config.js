@@ -8,15 +8,10 @@ export default defineConfig({
   federation({
     name: "remote_app",
     filename: "remoteEntry.js",
-    remotes: {
-      remoteStore: "http://localhost:5003/assets/remoteEntry.js",
-    },
     exposes: {
-      "./AuthRoutes": "./src/routes/AuthRoutes",
-      "./CheckingAuth": "./src/ui/components/CheckingAuth"
-
+      "./StoreProvider": "./src/store"
     },
-    shared: ["react", "react-dom", 'react-router-dom', 'react-redux', 'firebase/auth'],
+    shared: ["react", "react-dom", 'react-redux'],
   }),],
   build: {
     modulePreload: false,

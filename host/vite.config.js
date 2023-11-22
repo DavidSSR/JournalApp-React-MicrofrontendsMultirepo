@@ -10,7 +10,14 @@ export default defineConfig({
     remotes: {
       remoteJournal: "http://localhost:5001/assets/remoteEntry.js",
       remoteAuth: "http://localhost:5002/assets/remoteEntry.js",
+      remoteStore: "http://localhost:5003/assets/remoteEntry.js",
     },
-    shared: ["react", "react-dom", 'react-router-dom'],
+    shared: ["react", "react-dom", 'react-router-dom', 'react-redux'],
   }),],
+  build: {
+    modulePreload: false,
+    target: "esnext",
+    minify: false,
+    cssCodeSplit: false,
+  },
 })
