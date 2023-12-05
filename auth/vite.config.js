@@ -13,7 +13,9 @@ export default defineConfig({
     },
     exposes: {
       "./AuthRoutes": "./src/routes/AuthRoutes",
-      "./CheckingAuth": "./src/ui/components/CheckingAuth"
+      "./CheckingAuth": "./src/ui/components/CheckingAuth",
+      "./useForm":"./src/hooks/useForm",
+      "./UseCheckAuth":"./src/hooks/useCheckAuth",
 
     },
     shared: ["react", "react-dom", 'react-router-dom', 'react-redux', 'firebase/auth'],

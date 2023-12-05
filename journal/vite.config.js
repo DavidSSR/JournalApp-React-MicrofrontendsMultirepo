@@ -10,6 +10,7 @@ export default defineConfig({
     filename: "remoteEntry.js",
     remotes: {
       remoteStore: "http://localhost:5003/assets/remoteEntry.js",
+      remoteAuth: "http://localhost:5002/assets/remoteEntry.js",
     },
     exposes: {
       "./JournalRoutes": "./src/routes/JournalRoutes",
